@@ -1,0 +1,71 @@
+{
+  "name": "vue3-styled-ie11-vue2",
+  "version": "0.1.0",
+  "private": false,
+  "config": {
+    "app_to_debug": "excel",
+    "app_type_to_debug": "desktop",
+    "dev_server_port": 3000
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "dev-server": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "start": "office-addin-debugging start manifest.xml",
+    "start:desktop": "office-addin-debugging start manifest.xml desktop",
+    "start:web": "office-addin-debugging start manifest.xml web",
+    "stop": "office-addin-debugging stop manifest.xml",
+    "validate": "office-addin-manifest validate manifest.xml",
+    "watch": "vue-cli-service inspect --mode development",
+    "manifest:validate": "office-addin-manifest validate manifest.xml",
+    "manifest:update-guid": "office-addin-manifest modify manifest.xml --guid",
+    "certs:install": "office-addin-dev-certs install ",
+    "certs:verify": "office-addin-dev-certs verify",
+    "certs:uninstall": "office-addin-dev-certs uninstall"
+  },
+  "dependencies": {
+    "babel-polyfill": "6.26.0",
+    "core-js": "3.38.1",
+    "es6-promise": "4.2.8",
+    "pnpm": "^9.15.4",
+    "vue": "2.7.16"
+  },
+  "devDependencies": {
+    "@babel/core": "7.12.16",
+    "@babel/eslint-parser": "7.12.16",
+    "@vue/cli-plugin-babel": "5.0.0",
+    "@vue/cli-plugin-eslint": "5.0.0",
+    "eslint": "7.32.0",
+    "eslint-plugin-vue": "8.0.3",
+    "vue-template-compiler": "2.7.16",
+    "copy-webpack-plugin": "^9.0.1",
+    "@types/office-js": "^1.0.377",
+    "@types/office-runtime": "^1.0.35",
+    "office-addin-cli": "^1.5.5",
+    "office-addin-debugging": "^5.0.12",
+    "office-addin-dev-certs": "^1.11.3",
+    "office-addin-lint": "^2.2.5",
+    "office-addin-manifest": "^1.12.3",
+    "office-addin-prettier-config": "^1.2.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
